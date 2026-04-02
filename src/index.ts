@@ -280,6 +280,9 @@ app.route('/api/v1/categories', categoriesRouter);
 app.route('/api/v1/api-keys', apiKeysRouter);
 app.route('/api/v1/settings', settingsRouter);
 
+app.get('/', (c) => {
+  return c.redirect('/dashboard');
+});
 // ============================================================================
 // LINK REDIRECT HANDLER - Catch-all for short link redirects
 // ============================================================================
